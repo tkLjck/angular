@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let product of products" >
+        <div class="card">
+          <img [src]="product.imgUrls[0]" alt="">
+          <a [routerLink]="['/products/', product.id]">
+            <h3 class="card-title text-center">
+              {{ product.name }}
+            </h3>
+          </a>
+          <p style="padding: 10px; ">{{product.smalldesc}}</p>
+          <p style="padding: 10px;"><span>Giá tiền : </span>{{product.price}}<span>đ</span></p>
+        </div>
+    </div>
+  </div>
+</div>

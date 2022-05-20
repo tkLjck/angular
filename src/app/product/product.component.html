@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-2">
+      <div class="images" *ngFor="let image of product.imgUrls; let i = index">
+        <img [src]=" image " alt="" (mouseenter)="displayedImg = i">
+      </div>
+    </div>
+    <div class="col-dm-12 col-md-5">
+      <img [src]="product.imgUrls[displayedImg]" alt="" style="width:100%;">
+    </div>
+    <div class="col-dm-12 offset-md-1 col-md-4">
+      <h3>{{product.name}}</h3>
+      <p>{{product.description}}</p>
+      <p style="font-size: 25px;">Giá : {{product.price}}đ</p>
+
+      <button class="btn btn-primary"(click)="addToCard(product)">Thêm vào giỏ</button>
+    </div>
+  </div>
+</div>
